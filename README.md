@@ -1,2 +1,2 @@
-# invite.github.io
+# Invite.github.io
 Event Recommendation System
