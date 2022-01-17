@@ -27,7 +27,7 @@ A web recommendation system recommends nearby events according to users' favorit
    * Data tier: MySQL, MongoDB
    * Logic tier: Java
    
-   ![Architect](img/architect.png)
+   <img src = "imgs/architect.png" height = 60%, width = 60%>
 
 ## 3. Java Servlet Design
 - Logic tier(Java Servlet to RPC)
@@ -58,7 +58,7 @@ A web recommendation system recommends nearby events according to users' favorit
       * Set a new user into users table/collection in database
       * return response
 
-![APIs design](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img//APIs.png)
+![APIs design](imgs/APIs.png)
 
 
 
@@ -79,7 +79,7 @@ A web recommendation system recommends nearby events according to users' favorit
    * **category** - store item-category relationship
    * **history** - store user favorite history
 
-![mysql](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img/mysql.png)
+![mysql](imgs/mysql.png)
 
 
 
@@ -94,7 +94,8 @@ A web recommendation system recommends nearby events according to users' favorit
 
 ## 5. Design pattern
 * **Builder pattern**: `Item.java`
-        * When convert events from TicketMasterAPI to java Items, use builder pattern to freely add fields.
+     * When convert events from TicketMasterAPI to java Items, use builder pattern to freely add fields.
+     
 * **Factory pattern**: `ExternalAPIFactory.java`, `DBConnectionFactory.java`
      * `ExternalAPIFactory.java`: support multiple functions like recommendations of event, restaurant, news, jobs, etc., Just link to different public API. 
      * `DBConnectionFactory.java`: support multiple databases like MySQL and MongoDB. Improve extension ability.
