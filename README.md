@@ -29,7 +29,7 @@ A web recommendation system recommends nearby events according to users' favorit
    * Data tier: MySQL, MongoDB
    * Logic tier: Java
    
-   ![Architect](img/architect.png)
+   ![Architect](imgs/architect.png)
 
 ## 3. Java Servlet Design
 - Logic tier(Java Servlet to RPC)
@@ -60,7 +60,7 @@ A web recommendation system recommends nearby events according to users' favorit
       * Set a new user into users table/collection in database
       * return response
 
-![APIs design](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img//APIs.png)
+![APIs design](imgs/APIs.png)
 
 
 
@@ -81,7 +81,7 @@ A web recommendation system recommends nearby events according to users' favorit
    * **category** - store item-category relationship
    * **history** - store user favorite history
 
-![mysql](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img/mysql.png)
+![mysql](imgs/mysql.png)
 
 
 
