@@ -1,7 +1,6 @@
 # Invite: Event Recommendation & Ticket Search System
 A web recommendation system recommends nearby events according to users' favorite events, also allows users to search events and purchase tickets.
 
-![demo]()
 
 
 
@@ -97,8 +96,8 @@ A web recommendation system recommends nearby events according to users' favorit
 ## 5. Design pattern
    * **Builder pattern**: `Item.java`
       
-         * When convert events from TicketMasterAPI to java Items, use builder pattern to freely add fields.
-         * **Factory pattern**: `ExternalAPIFactory.java`, `DBConnectionFactory.java`
+        * When convert events from TicketMasterAPI to java Items, use builder pattern to freely add fields.
+   * **Factory pattern**: `ExternalAPIFactory.java`, `DBConnectionFactory.java`
       
       * `ExternalAPIFactory.java`: upport multiple functions like recommendations of event, restaurant, news, jobs, etc., Just link to different public API. 
       * `DBConnectionFactory.java`: support multiple database like MySQL and MongoDB. Improve extension ability.
