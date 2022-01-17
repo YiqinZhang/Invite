@@ -3,7 +3,6 @@ A web recommendation system recommends nearby events according to users' favorit
 
 
 
-
 ## 1. Project Description 
 - Frontend: an interactive web page with AJAX technology implemented with HTML, CSS, and JavaScript. This web application supports three key implementations:
 
@@ -28,7 +27,7 @@ A web recommendation system recommends nearby events according to users' favorit
    * Data tier: MySQL, MongoDB
    * Logic tier: Java
    
-   ![Architect](imgs/architect.png)
+   ![Architect](img/architect.png)
 
 ## 3. Java Servlet Design
 - Logic tier(Java Servlet to RPC)
@@ -59,7 +58,7 @@ A web recommendation system recommends nearby events according to users' favorit
       * Set a new user into users table/collection in database
       * return response
 
-![APIs design](imgs/APIs.png)
+![APIs design](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img//APIs.png)
 
 
 
@@ -80,28 +79,24 @@ A web recommendation system recommends nearby events according to users' favorit
    * **category** - store item-category relationship
    * **history** - store user favorite history
 
-![mysql](imgs/mysql.png)
+![mysql](https://raw.githubusercontent.com/MoonSulong/EventRecommendation/master/img/mysql.png)
 
 
 
 - MongoDB
-   * **users** - store user information and favorite history. = (users + history)
+   * **users** : store user information and favorite history.  (= users + history)
    
-   * **items** - store item information and item-category relationship. = (items + category)
+   * **items** : store item information and item-category relationship. ( = items + category)
    
-   * **logs** – store log information
+   * **logs** : store log information
    
      
 
 ## 5. Design pattern
-   * **Builder pattern**: `Item.java`
-      
+* **Builder pattern**: `Item.java`
         * When convert events from TicketMasterAPI to java Items, use builder pattern to freely add fields.
-   * **Factory pattern**: `ExternalAPIFactory.java`, `DBConnectionFactory.java`
-      
-      * `ExternalAPIFactory.java`: upport multiple functions like recommendations of event, restaurant, news, jobs, etc., Just link to different public API. 
-      * `DBConnectionFactory.java`: support multiple database like MySQL and MongoDB. Improve extension ability.
-      
-   * **Singleton pattern**: `MySQLConnection.java`, `MongoDBConnection.java`
-      
-      * Only create one specific instance of the database, and the class can control the instance itself and give global access to the outer class.
+* **Factory pattern**: `ExternalAPIFactory.java`, `DBConnectionFactory.java`
+     * `ExternalAPIFactory.java`: support multiple functions like recommendations of event, restaurant, news, jobs, etc., Just link to different public API. 
+     * `DBConnectionFactory.java`: support multiple databases like MySQL and MongoDB. Improve extension ability.
+* **Singleton pattern**: `MySQLConnection.java`, `MongoDBConnection.java`
+     * Only create one specific instance of the database, and the class can control the instance itself and give global access to the outer class.
