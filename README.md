@@ -96,9 +96,13 @@ A web recommendation system recommends nearby events according to users' favorit
 
 ## 5. Design pattern
    * **Builder pattern**: `Item.java`
-      * When convert events from TicketMasterAPI to java Items, use builder pattern to freely add fields.
-   * **Factory pattern**: `ExternalAPIFactory.java`, `DBConnectionFactory.java`
-      * `ExternalAPIFactory.java`: support multiple function like recommendation of event, restaurant, news, jobs… just link to different public API like TicketMasterAPI. Improve extension ability.
+      
+         * When convert events from TicketMasterAPI to java Items, use builder pattern to freely add fields.
+         * **Factory pattern**: `ExternalAPIFactory.java`, `DBConnectionFactory.java`
+      
+      * `ExternalAPIFactory.java`: upport multiple functions like recommendations of event, restaurant, news, jobs, etc., Just link to different public API. 
       * `DBConnectionFactory.java`: support multiple database like MySQL and MongoDB. Improve extension ability.
+      
    * **Singleton pattern**: `MySQLConnection.java`, `MongoDBConnection.java`
-      * Only create specific number of instance of database, and the class can control the instance itself, and give the global access to outerclass
+      
+      * Only create one specific instance of the database, and the class can control the instance itself and give global access to the outer class.
