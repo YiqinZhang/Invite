@@ -27,7 +27,7 @@ A web recommendation system recommends nearby events according to users' favorit
    * Data tier: MySQL, MongoDB
    * Logic tier: Java
    
-   <img src = "imgs/architecture.png" height = 60%, width = 60%>
+   <img src = "imgs/architecture.png" height = 100%, width = 100%>
 
 ## 3. Java Servlet Design
 - Logic tier(Java Servlet to RPC)
